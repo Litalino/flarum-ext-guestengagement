@@ -21,12 +21,12 @@ import Button from 'flarum/common/components/Button';
 app.initializers.add('litalino/flarum-ext-guestengagement', () => {
   extend(IndexPage.prototype, 'view', function (vdom) {
     if (!app.session.user)
-      if (app.forum.attribute('litalino-guestengagement.hideHomeBox') === true)
+      if (app.forum.attribute('justoverclock-guestengagement.hideHomeBox') === true)
         if (vdom.children && vdom.children.splice) {
           /*  Imposta un timeout per far scomparire automaticamente il div*/
           setTimeout(function () {
             $('#wrapperengage').fadeOut().empty();
-          }, app.forum.attribute('litalino-guestengagement.timeOut'));
+          }, app.forum.attribute('justoverclock-guestengagement.timeOut'));
 
           const insert = m(
             'div',
@@ -38,8 +38,8 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
                 app.translator.trans('flarum-ext-guestengagement.forum.whenucreate'),
                 app.translator.trans('flarum-ext-guestengagement.forum.uwillreceive'),
               ]),
-               //app.forum.attribute('litalino-guestengagement.hidePostButtom') === true ? '' : buttom_tag_home
-              //if (app.forum.attribute('litalino-guestengagement.hideHomeboxButtom') === true)
+               //app.forum.attribute('justoverclock-guestengagement.hidePostButtom') === true ? '' : buttom_tag_home
+              //if (app.forum.attribute('justoverclock-guestengagement.hideHomeboxButtom') === true)
                 /*m(
                   'button',
                   { className: '.SplitDropdown-button Button Button--primary hasIcon', type: 'button', onclick: () => app.modal.show(SignUpModal) },
@@ -64,7 +64,7 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
   override(PostStream.prototype, 'view', function (originalView) {
     // If we're logged in or this feature is disabled, change nothing
     // about the PostStream
-    if (app.session.user || app.forum.attribute('litalino-guestengagement.hidePostBox') !== true) {
+    if (app.session.user || app.forum.attribute('justoverclock-guestengagement.hidePostBox') !== true) {
       return originalView();
     }
 
@@ -86,15 +86,15 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
       </>
     );
 
-    const tchange = app.forum.attribute('litalino-guestengagement.tchange') ? '<p>'+ app.forum.attribute('litalino-guestengagement.tchange') +'</p>' : ''; 
-    const BoxTitle = app.forum.attribute('litalino-guestengagement.BoxTitle') ? app.forum.attribute('litalino-guestengagement.BoxTitle') : app.translator.trans('flarum-ext-guestengagement.forum.post_title');
+    const tchange = app.forum.attribute('justoverclock-guestengagement.tchange') ? '<p>'+ app.forum.attribute('justoverclock-guestengagement.tchange') +'</p>' : ''; 
+    const BoxTitle = app.forum.attribute('justoverclock-guestengagement.BoxTitle') ? app.forum.attribute('justoverclock-guestengagement.BoxTitle') : app.translator.trans('flarum-ext-guestengagement.forum.post_title');
 
     const engagementBox = (
-      <div key="litalino-guestengagement" id="wrapperengageps">
+      <div key="justoverclock-guestengagement" id="wrapperengageps">
         <div id="engageboxps">
           {tchange}
           <i class="fas fa-comments-alt"></i> <strong>{BoxTitle}</strong>
-         { app.forum.attribute('litalino-guestengagement.hidePostButtom') === true ? buttom_tag : '' }
+         { app.forum.attribute('justoverclock-guestengagement.hidePostButtom') === true ? buttom_tag : '' }
         </div>
       </div>
     );
@@ -102,7 +102,7 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
     const newItems = postStreamItems.reduce((items, currentItem) => {
       let itemList = [...items, currentItem];
 
-      if (currentItem.attrs['data-index'] === (parseInt(app.forum.attribute('litalino-guestengagement.xPost')) || 0)) {
+      if (currentItem.attrs['data-index'] === (parseInt(app.forum.attribute('justoverclock-guestengagement.xPost')) || 0)) {
         itemList.push(engagementBox);
       }
 

@@ -1,0 +1,25 @@
+flarum-ext-guestengagement:
+  forum:
+    or: hoặc
+    loginbtn: Đăng nhập
+    signupbtn: Đăng ký
+    hello: Xin chào! Có vẻ như bạn quan tâm đến diễn đàn này nhưng bạn chưa đăng ký tài khoản.
+    whenucreate: Khi bạn tạo tài khoản, chúng tôi sẽ có thể nhớ chính xác những gì bạn đã đọc, vì vậy bạn có thể tiếp tục chính xác nơi bạn đã dừng lại.
+    uwillreceive: Bạn sẽ nhận được thông báo tại đây hoặc qua email khi ai đó trả lời bạn. Bạn cũng có thể "Thích" để thể hiện sự đánh giá cao của mình.
+    hellops: Xin chào! Có vẻ như bạn quan tâm đến bài viết này!
+    whenucreateps: Khi bạn tạo tài khoản, chúng tôi sẽ có thể nhớ chính xác những gì bạn đã đọc và bạn sẽ nhận được
+    uwillreceiveps: thông báo, tại đây hoặc qua email, khi ai đó trả lời bạn. Bạn cũng có thể "Thích" để thể hiện sự đánh giá cao của mình.
+    post_title: Bạn có muốn đóng góp cho cuộc thảo luận này không?
+  admin:
+    afterxpost: Hiển thị hộp cảnh báo Sau bài đăng X
+    afterxpostdesc: chấp nhận số, mặc định là 0 (hộp sẽ được hiển thị trên đầu các luồng bài viết)
+    autohide: Tự động ẩn hộp sau X giây
+    autohidedesc: sử dụng mili giây, ví dụ 5 giây bằng 5000
+    changetextbox: Thay đổi chữ cho hộp
+    changetextboxdesc: Tại đây bạn có thể đặt văn bản cho hộp cảnh báo nằm GIỮA CÁC BÀI VIẾT
+    maintitle: Thay đổi TIÊU ĐỀ hộp
+    maintitledesc: Tại đây bạn có thể đặt Tiêu đề cho hộp cảnh báo nằm giữa CÁC BÀI VIẾT
+    enablealbox: Bật/Tắt Hộp cảnh báo trên trang chủ
+    enablepostbox: Bật/Tắt hộp "Giữa bài viết"
+    enable_buttom_homepage: Bật/Tắt "Buttom" trên Trang chủ
+    enable_buttom_post: Bật/Tắt "Buttom" trên bài viết

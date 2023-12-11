@@ -26,20 +26,20 @@ return [
     ->css(__DIR__ . '/resources/less/admin.less'),
   new Extend\Locales(__DIR__ . '/resources/locale'),
   (new Extend\Settings)
-    ->serializeToForum('litalino-guestengagement.xPost', 'litalino-guestengagement.coordinates'),
+    ->serializeToForum('justoverclock-guestengagement.xPost', 'justoverclock-guestengagement.coordinates'),
   (new Extend\Settings)
-    ->serializeToForum('litalino-guestengagement.timeOut', 'litalino-guestengagement.timeout'),
+    ->serializeToForum('justoverclock-guestengagement.timeOut', 'justoverclock-guestengagement.timeout'),
   (new Extend\Settings)
-    ->serializeToForum('litalino-guestengagement.tchange', 'litalino-guestengagement.textchange'),
+    ->serializeToForum('justoverclock-guestengagement.tchange', 'justoverclock-guestengagement.textchange'),
   (new Extend\Settings)
-    ->serializeToForum('litalino-guestengagement.BoxTitle', 'litalino-guestengagement.BoxTitleChange'),
+    ->serializeToForum('justoverclock-guestengagement.BoxTitle', 'justoverclock-guestengagement.BoxTitleChange'),
   (new Extend\Settings())
-    ->serializeToForum('litalino-guestengagement.hideHomeBox', 'litalino-guestengagement.hide.homebox', 'boolval', true),
+    ->serializeToForum('justoverclock-guestengagement.hideHomeBox', 'justoverclock-guestengagement.hide.homebox', 'boolval', true),
   (new Extend\Settings())
-    ->serializeToForum('litalino-guestengagement.hidePostBox', 'litalino-guestengagement.hide.postbox', 'boolval', true),
+    ->serializeToForum('justoverclock-guestengagement.hidePostBox', 'justoverclock-guestengagement.hide.postbox', 'boolval', true),
     (new Extend\Settings())
-      ->serializeToForum('litalino-guestengagement.hideHomeboxButtom', 'litalino-guestengagement.hide.homebox.buttom', 'boolval', true),
+      ->serializeToForum('justoverclock-guestengagement.hideHomeboxButtom', 'justoverclock-guestengagement.hide.homebox.buttom', 'boolval', true),
       (new Extend\Settings())
-        ->serializeToForum('litalino-guestengagement.hidePostButtom', 'litalino-guestengagement.hide.post.buttom', 'boolval', true),
+        ->serializeToForum('justoverclock-guestengagement.hidePostButtom', 'justoverclock-guestengagement.hide.post.buttom', 'boolval', true),
 
 ];
