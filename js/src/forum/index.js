@@ -93,7 +93,7 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
       <div key="justoverclock-guestengagement" id="wrapperengageps">
         <div id="engageboxps">
           {tchange}
-          <i class="fas fa-comments-alt"></i> <strong>{BoxTitle}</strong>
+          <i class="fas fa-comments"></i> <strong>{BoxTitle}</strong>
          { app.forum.attribute('justoverclock-guestengagement.hidePostButtom') === true ? buttom_tag : '' }
         </div>
       </div>
