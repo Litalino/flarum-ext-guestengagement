@@ -1,0 +1,72 @@
+{
+  "name": "litalino/flarum-ext-guestengagement",
+  "description": "Add a box that invite user to register under navbar",
+  "keywords": [
+    "flarum",
+    "flarum extension",
+    "guest engagement",
+    "signup invite"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.0.0"
+  },
+  "require-dev": {
+    "flarum/testing": "^1.0.0"
+  },
+  "authors": [
+    {
+      "name": "litalino",
+      "email": "info@khatvongsong.vn",
+      "role": "Co-development",
+      "homepage": "https://khatvongsong.vn"
+    },
+    {
+      "name": "Marco Colia",
+      "email": "info@flarum.it",
+      "role": "Developer",
+      "homepage": "https://flarum.it"
+
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/litalino/flarum-ext-guestengagement/issues",
+    "source": "https://github.com/litalino/flarum-ext-guestengagement",
+    "forum": "https://discuss.flarum.org/d/100000-flarum-ext-guestengagement"
+  },
+  "autoload": {
+    "psr-4": {
+      "Litalino\\Guestengagement\\": "src/"
+    }
+  },
+  "replace": {
+      "justoverclock/flarum-ext-guestengagement": "*"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Guestengagement",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-sign-in-alt",
+        "backgroundColor": "green",
+        "color": "white"
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  },
+  "require-dev": {
+    "flarum/phpstan": "*"
+  },
+  "scripts": {
+    "analyse:phpstan": "phpstan analyse",
+    "clear-cache:phpstan": "phpstan clear-result-cache"
+  },
+  "scripts-descriptions": {
+    "analyse:phpstan": "Run static analysis"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
