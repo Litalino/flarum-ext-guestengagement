@@ -3,52 +3,67 @@
 #wrapperengage {
   text-align: center;
 
-}
-#engagebox {
-  display: inline-block;
-  min-width: 100%;
-  max-width: 100%;
-  margin-top: 20px;
-  width: 100%;
-  color: #667c99;
-  border-width: 2px 0px;
-  border-image: initial;
-  background: @primarybg;
-  border-radius: 4px;
-  padding: 5px 18px;
-  border-top: 2px dotted #fff;
-  border-bottom: 2px dotted #fff;
-  border-left: 2px dotted #fff;
-  border-right: 2px dotted #fff;
-
-  > button {
-    margin: 0px 10px;
+  .engagebox {
+    display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    width: 100%;
+    color: var(--alert-color);
+    border-width: 2px 0px;
+    border-image: initial;
+    background: var(--alert-bg);
+    border-radius: 4px;
+    padding: 5px 18px;
+    border-top: 2px dotted #fff;
+    border-bottom: 2px dotted #fff;
+    border-left: 2px dotted #fff;
+    border-right: 2px dotted #fff;
+  
+    > button {
+      margin: 0px 10px;
+    }
   }
+
 }
-#wrapperengageps {
+
+
+#wrapperengage-disc {
   text-align: center;
 
-}
-#engageboxps {
-  display: inline-block;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  min-width: fit-content;
-  max-width: 100%;
-  width: 100%;
-  color: rgb(102, 124, 153);
-  border-width: 2px 0px;
-  border-image: initial;
-  background: var(--alert-bg);
-  border-radius: 4px;
-  padding: 5px 15px;
-  border-top: 2px dotted rgb(255, 255, 255);
-  border-bottom: 2px dotted rgb(255, 255, 255);
-  border-left: 2px dotted rgb(255, 255, 255);
-  border-right: 2px dotted rgb(255, 255, 255);
+  .engagebox {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: fit-content;
+    max-width: 100%;
+    width: 100%;
+    color: var(--alert-color);
+    border-width: 2px 0px;
+    border-image: initial;
+    background: var(--alert-bg);
+    border-radius: 4px;
+    padding: 5px 15px;
+    border-top: 2px dotted rgb(255, 255, 255);
+    border-bottom: 2px dotted rgb(255, 255, 255);
+    border-left: 2px dotted rgb(255, 255, 255);
+    border-right: 2px dotted rgb(255, 255, 255);
 
-  > button {
-    margin: 0px 10px;
+    .text {
+        :after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+    .button {
+      margin: 0px 10px;
+      display: none;
+    }
+    @media @phone {
+      .button {
+          display: block;
+      }
+    }
   }
 }
-

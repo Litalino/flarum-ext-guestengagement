@@ -31,7 +31,7 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
           const insert = m(
             'div',
             { id: 'wrapperengage' },
-            m('div', { id: 'engagebox' }, [
+            m('div', { class: 'engagebox' }, [
               m('p', [
                 m('strong', app.translator.trans('flarum-ext-guestengagement.forum.hello')),
                 m('p'),
@@ -90,11 +90,15 @@ app.initializers.add('litalino/flarum-ext-guestengagement', () => {
     const BoxTitle = app.forum.attribute('justoverclock-guestengagement.BoxTitle') ? app.forum.attribute('justoverclock-guestengagement.BoxTitle') : app.translator.trans('flarum-ext-guestengagement.forum.post_title');
 
     const engagementBox = (
-      <div key="justoverclock-guestengagement" id="wrapperengageps">
-        <div id="engageboxps">
+      <div key="justoverclock-guestengagement" id="wrapperengage-disc">
+        <div class="engagebox">
           {tchange}
-          <i class="fas fa-comments"></i> <strong>{BoxTitle}</strong>
-         { app.forum.attribute('justoverclock-guestengagement.hidePostButtom') === true ? buttom_tag : '' }
+          <span class="text">
+            <i class="fas fa-comments"></i> <strong>{BoxTitle}</strong>
+          </span>
+          <span class="button">
+            { app.forum.attribute('justoverclock-guestengagement.hidePostButtom') === true ? buttom_tag : '' }
+          </span>
         </div>
       </div>
     );
